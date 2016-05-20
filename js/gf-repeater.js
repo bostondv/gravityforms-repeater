@@ -81,6 +81,8 @@ function gfRepeater_getRepeaters() {
 						console.log('Form #'+formId+' - Repeater #'+repeaterId+' - Children Found: '+(repeaterChildCount));
 					}
 
+					jQuery(form).trigger('gform_repeater_init_done', [repeaterId, 1]);
+
 					var repeaterControllers = {};
 					var endElement = jQuery(this);
 					var addElement = endElement.find('.gf_repeater_add');
